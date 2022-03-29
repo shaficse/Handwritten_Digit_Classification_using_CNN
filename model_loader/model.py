@@ -1,4 +1,6 @@
 import tensorflow as tf
+
+
 def build_fc_model():
     fc_model = tf.keras.Sequential(
     [
