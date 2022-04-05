@@ -1,8 +1,8 @@
 import tensorflow as tf
 
-learning_rate = 1e-1
+learning_rate = 1e-3
 loss = 'sparse_categorical_crossentropy'
 metrics = ['accuracy']
-optimizer = tf.keras.optimizers.SGD(learning_rate)
+optimizer = tf.keras.optimizers.Adam(learning_rate=learning_rate)
 BATCH_SIZE = 64
-EPOCHS = 5
+EPOCHS = 100

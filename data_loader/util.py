@@ -6,7 +6,19 @@ import numpy as np
 from IPython import display as ipythondisplay
 from string import Formatter
 
-
+def visualize_data(data,data_label, number_data_to_show=36):
+    import math
+    plt.figure(figsize=(10,10))
+    random_inds = np.random.choice(data.shape[0],number_data_to_show)
+    no_img_per_row = int(math.sqrt(number_data_to_show))
+    for i in range(number_data_to_show):
+        plt.subplot(no_img_per_row,no_img_per_row,i+1)
+        plt.xticks([])
+        plt.yticks([])
+        plt.grid(False)
+        image_ind = random_inds[i]
+        plt.imshow(np.squeeze(data[image_ind]),cmap=plt.cm.binary)
+        plt.xlabel(data_label[image_ind])
 
 
 

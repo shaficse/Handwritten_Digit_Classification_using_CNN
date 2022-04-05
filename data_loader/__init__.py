@@ -1,5 +1,3 @@
-import mitdeeplearning.util
+import data_loader.util
+import data_loader.loader
 
-import mitdeeplearning.lab1
-import mitdeeplearning.lab2
-import mitdeeplearning.lab3
